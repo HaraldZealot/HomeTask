@@ -1,0 +1,67 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 10},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+
+\section{Формулы}
+\begin{equation}
+ e^x = 1 + \frac{x}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+...+\frac{x^n}{n!}...
+\end{equation}
+\begin{equation}
+ \sin{x} = \frac{x}{1!}-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\frac{x^9}{9!}+...+\frac{(-1)^{n}x^{2n+1}}{(2n+1)!}...
+\end{equation}
+\begin{equation}
+ \cos{x} = 1 - \frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}+...+\frac{(-1)^{n}x^{2n}}{(2n)!}...
+\end{equation}
+
+Ряд сходится с заданной точностью, когда новый прибавляемый член становится по модулю меньше точности.
+
+\section{Задача}
+Посчитать соответствующую подзаданию функцию и сравнить с функцией, реализованной в стандартной библиотеке \verb|math.h|. Результаты представить в виде таблицы. В первом столбце $x$, во втором рассчитанное вами значение, в третьем значение библиотечной функции, а в четвёртом разность между ваши и библиотечным значением. Точность $\varepsilon$ (в программировании \verb|eps|) можете указать как в тексте программы, так и предложить ввести пользователю.
+
+\begin{enumerate}
+ \item Рассчитайте значение $e^x$\footnote{В стандартной библиотеке эта функция называется $\exp$. $\exp(x) \equiv e^x$}.
+ \item Рассчитайте значение $\sin(x)$
+ \item Рассчитайте значение $\cos(x)$
+\end{enumerate}
+
+
+
+\end{document}
