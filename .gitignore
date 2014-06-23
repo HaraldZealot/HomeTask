@@ -1,0 +1,8 @@
+missfont.log
+*.pyg
+*.backup
+*.pdf
+*.aux
+*.log
+*.out
+
