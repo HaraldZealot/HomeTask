@@ -1,0 +1,44 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\author{Alaksiej Stankievič}
+\title{Домашние задание 2}
+
+\begin{document}
+ Написать алгоритмы в виде псевдокода или блок-схемы.
+ \begin{enumerate}
+  \item Перевод числа из двоичной системы счисления в десятичную.
+  \item Перевод числа из десятичной системы счисления в двоичную.
+  \item Пользователь вводит число $b$ и число $x$. Перевести число $x$ из десятичной в $b$-ную систему счисления. 
+  \item Ряд $1, 1, 2, 3, 5, 8, 13, 21, 34...$ называется числами Фибоначчи. Точное определение чисел Фибоначчи следующее $F_1 =1, F_2=1, F_i=F_{i-1}+F_{i-2}$. Пользователь вводит число $n, n\geq3$, вывести все $n$ чисел Фибоначчи через пробел.
+  \item\footnote{Это задание было в дневной группе, но вечерняя тоже может его делать.} Дано два отрезка $a$ и $b$. Найти наибольший отрезок, который целое число раз укладывается в оба отрезка.
+  \item\footnote{Это задание было в вечерней группе, но дневная тоже может его делать.} Написать алгоритмы сложения, умножения и деления столбиком на бумаге.
+ \end{enumerate}
+
+\end{document}

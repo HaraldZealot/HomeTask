@@ -1,0 +1,121 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{Ubuntu Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+\renewcommand\listingscaption{Консольный вывод}
+
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 9},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+ Запрограммировать на языке С. Вызов функции \verb|system("cls");| на windows или \verb|system("clear");| на  linux очищает всю консоль.
+ \section{более простые задания}
+ \begin{enumerate}
+  \item Пользователь вводит натуральные числа $w$ и $h$. Напечатать звёздочками прямоугольник введённой ширины и высоты.
+  \begin{listing}[h]
+\begin{center}
+\begin{minted}{cpp}
+******
+******
+******
+******
+\end{minted}
+\end{center}
+
+\caption{Прямоугольник с w равной 6 и h равной 4.}
+%\label{lst:example}
+\end{listing}
+  \item Иван Васильевич зашёл в комнату и обнаружил, что туда залетели мухи. Он начал выгонять мух размахивая полотенцем. Через некоторое время он устал и процес изгнания замедлился на 20\%. Вывести через какое время Иван Васильевич выгонит всех мух либо сообщить о том, что это не возможно. Пользователь вводит $N$ изначальное число мух, $exorcismSpeed$ изначальное количество выгоняемых полотенцем мух в минуту, $fatigueTime$ время через которое Иван Васильевич устаёт, $flyReturnSpeed$ число мух в минуту которые залетают назад.
+  \item Составьте небольшой текстовый квест, или интерактивную книгу. Текст лучше делать транслитом или по английски. Смотрите \ref{lst:firstSC}, \ref{lst:secondSC} и \ref{lst:thirdSC}.
+    \begin{listing}[h]
+Вы Илья Муромец, вам надоело лежать на печи и вы отправились за подвигами
+\caption{Первый экран}
+\label{lst:firstSC}
+\end{listing}
+\begin{listing}[h]
+Подъехали вы к камню у развилки и прочли:
+Налево поедешь себя потеряешь, направо поедешь коня потеряешь,
+прямо поедешь неживой будешь.
+
+1. налево\\
+2. прямо\\
+3. направо\\
+Ваш выбор?
+\caption{Второй экран}
+\label{lst:secondSC}
+\end{listing}
+\begin{listing}[h]
+Проехали вы пятирик шагов да угодили в волчью яму. А вас ведь предупреждали :)))
+\caption{Третий экран, пользователь ввёл 2.}
+\label{lst:thirdSC}
+\end{listing}
+  \item Реализовать простой калькулятор. Пользователь вводит число, затем операцию в виде символа ('+', '-', '*', '/'), после второе число. Вывести результат операции.
+ \end{enumerate}
+ 
+ \section{более сложные задания}
+ \begin{enumerate}
+  \item Нарисовать ёлочку. Число ярусов вводит пользователь. Смотрите рисунок \ref{lst:tannen}.
+\begin{listing}[h]
+\begin{center}
+\begin{minted}{cpp}
+    *
+   ***
+    *
+   * *
+  *****
+    *
+   * *
+  *   *
+ *******
+    *
+   * *
+  *   *
+ *     *
+*********
+   * *
+   * *
+\end{minted}
+\end{center}
+
+\caption{Четырёхярусная ёлочка.}
+\label{lst:tannen}
+\end{listing}
+
+  \item Реализовать более сложный калькулятор. Пользователь может вводить произвольное число чисел и операций (поочерёдно), после введения символа '=' выдаётся конечный результат, и калькулятор сбрасывается в начало. Если вместо операции ввести символ 'c', то калькулятор сбрасывается в начало, при вводе символа 'e' вместо операции калькулятор завершает работу.  
+ \end{enumerate}
+
+
+\end{document}

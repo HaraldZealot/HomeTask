@@ -1,0 +1,43 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\author{Alaksiej Stankievič}
+\title{Лабораторная работа на полиморфизм}
+
+\begin{document}
+ Запрограммировать на языке С. \textbf{Массивы не использовать}.
+ \begin{enumerate}
+  \item Пользователь вводит радиус основания и высоту (можно целыми числами). Вывести объём и полную поверхность конуса (дробными числами с форматированием).
+  \item Вывести в виде таблицы (например по 16 символов в строке) первую половину таблицы ASCII (символы с кодами от 0 до 127 включительно).
+  \item Пользователь вводит число $x$ и степень $p$. Вывести $x^p$. Степень целая (т.е. может быть отрицательной).
+  \item Пользователь вводит число $n\geq1$. Затем вводит $n$ чисел. Вывести максимальное и минимальное из этих чисел.
+  \item Пользователь вводит число $n\geq0$. Программа выводит $n$ чисел Фибоначчи. 
+ \end{enumerate}
+
+\end{document}

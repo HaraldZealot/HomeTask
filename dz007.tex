@@ -1,0 +1,51 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 7},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+
+ Запрограммировать на языке С.
+ \begin{enumerate}
+  \item Пользователь вводит натуральное число $x\geq{}2$. Проверить является ли оно простым\footnote{Число называется простым если оно нацело делится только на себе и на 1}.
+ \item Разложить натуральное число $x\geq{}2$ на простые сомножители  
+ \footnote{\textit{Примеры}: 12 = 2 * 2 * 3,  144 = 2 * 2 * 2 * 2 * 3 * 3, 121 = 11 * 11, 17 = 17. Можно, также, писать в виде 144 = (2\textasciicircum4) *\\ (3\textasciicircum2), 17 = (17\textasciicircum1)}
+  \item Пользователь вводит нечётное число $n$ выведите ромбик символом \verb|#| диагонали которого равны $n$.
+ \end{enumerate}
+
+\end{document}

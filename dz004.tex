@@ -1,0 +1,45 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\author{Alaksiej Stankievič}
+\title{Лабораторная работа на полиморфизм}
+
+\begin{document}
+ Запрограммировать на языке С. Работать только с целыми числами.
+ \begin{enumerate}
+  \item Пользователь вводит число $n$, а затем $n$ чисел. Вывести произведения этих чисел.
+  \item Пользователь вводит число $x$ и степень $p$. Вывести $x^p$.
+  \item Пользователь вводит число $L$ и число $x$. Найти и вывести степень $p$ такую, что 
+  $x^p$ наиболее близко снизу к $L$. (Конкретнее: $x^p\leq{}L$, а $x^{p+1}>L$).
+ \end{enumerate}
+ 
+ Ответьте на вопрос: в каких случаях следует применять цикл for, а в каких while?
+  
+
+\end{document}

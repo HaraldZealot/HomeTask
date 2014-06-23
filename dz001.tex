@@ -1,0 +1,56 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\author{Alaksiej Stankievič}
+\title{Лабораторная работа на полиморфизм}
+
+\begin{document}
+ Написать алгоритмы в виде псевдокода или блок-схемы.
+ \section{Про числа}
+ \begin{enumerate}
+  \item Пользователь вводит число $n$, а затем $n$ чисел. Вывести произведения этих чисел.
+  \item Пользователь вводит число $x$ и степень $p$. Вывести $x^p$.
+  \item Пользователь вводит число $L$ и число $x$. Найти и вывести степень $p$ такую, что 
+  $x^p$ наиболее близко снизу к $L$. (Конкретнее: $x^p\leq{}L$, а $x^{p+1}>L$).
+  \item Пользователь вводит $x$, найти и вывести $\sqrt{x}$ (например, подбором) с точностью до трёх десятичных знаков после запятой.
+ \end{enumerate}
+ 
+ \section{Про робота и лабиринты}
+  Робот имеет направление, может двигаться на шаг вперёд, проверять возможность движения вперёд, различать дверь от стены.
+  \begin{enumerate}
+   \item В прямоугольном лабиринте привести робота к противоположной стене.
+   \item В прямоугольном лабиринте привести робота в противоположный правый угол.
+   \item В произвольном лабиринте без препятствий вывести робота к противоположной стене. (противоположной считается стена на прямой наиболее удалённая от робота)
+   \item В произвольном лабиринте с препятствиями вывести робота к противоположной стене.
+   \item В произвольном лабиринте с препятствиями выйти из лабиринта.
+  \end{enumerate}
+  Робот может вести внутренние записи (например локальные координаты).
+  
+
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 8},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+
+ Запрограммировать на языке С.
+ \begin{enumerate}
+  \item Пользователь вводит два натуральных числа $m, n$. Заполнить поле $m\times{}n$ звёздочками в шахматном порядке.
+  \item Саша и Вася положили в банк одинаковую сумму: 1000\$. Саша положил под простой\footnote{Процент всегда начисляется от изначальной суммы на вкладе.} процент, ставка равна 6\%, а Вася под сложный\footnote{Процент начисляется от текущей суммы на вкладе.}, ставка --- 4\%. Процент начисляется ежеквартально (каждые три месяца). Найдите через какое время Вася будет иметь на счету большую сумму. Выведете  историю изменения суммы на счёте, до момента, когда Вася станет богаче, и ещё на протяжении трёх кварталов. Счёт выводить с точностью до центов, но сами деньги хранить внутри программы как целые числа.
+  \item Проверить является ли введённое пользователем число палиндромом\footnote{Палиндром это число или фраза, которые одинаково читаются в обоих направлениях. Например, число 121 палиндром, а 112 --- нет.}.
+  \item Перевести введённое пользователем число в 12-ичную систему счисления.
+ \end{enumerate}
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\author{Alaksiej Stankievič}
+\title{Домашние задание 3}
+
+\begin{document}
+ \section{Запрограммировать на языке C}
+  Написать программу, которая предлагает пользователю ввести два числа, а затем выводит 5 арифметических операций в следующем виде:
+  \begin{verbatim}
+7 + 5 = 12
+7 - 5 = 2
+7 * 5 = 35
+7 / 5 = 1
+7 % 5 = 2
+  \end{verbatim}
+ \section{Поупражняться в тетради}
+  \begin{itemize}
+   \item Написать таблицу сложения и умножения в двоичной и шестнадцатеричной системе.
+   \item Сложить столбиком числа содержащие не менее 5 цифр в двоичной и шестнадцатеричной системе
+   \item Умножить столбиком числа содержащие не менее 5 цифр в двоичной и шестнадцатеричной системе
+   \item Разделить столбиком числа в двоичной системе.
+  \end{itemize}
+
+
+\end{document}
