@@ -1,0 +1,62 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 13},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+\section{Задачи}
+
+\begin{enumerate}
+ \item Написать программу с функциями вычисляющими НОД и НОК.
+ \item Написать функцию возведение дробного числа в целую (в том числе отрицательную степень)\footnote{Хорошо, если реализуете двоичное возведение в степень}.
+ \item Пользователь вводит $n$. В поле $n\times{}n$ нужно вывести диез если номер строки $i$ и номер столбца $j$ взаимно просты\footnote{Числа взаимно просты если их НОД равен 1.} и пробел в остальных случаях.
+\end{enumerate}
+
+\section{Задачи от Ивана}
+
+
+\begin{enumerate}
+ \item Вывести любые 10 букв одну под другой (через \verb|\n|, то есть):\\
+A\\
+G\\
+M
+ \item Пользователь вводит два числа, определить делится ли первое число на второе и делится ли второе на первое. Соответственно вывести a/b (если первое делится на второе), b/a (если второе делится на первое), a!/b (если первое не делится на второе), b!/a (если второе не делится на первое).
+ \item Пользователь вводит 3 числа, $a$, $b$ и $c$, если $a + b>c$, вывести надпись ``a + b>c'', если меньше то ``a + b<c''.
+\end{enumerate}
+
+\end{document}

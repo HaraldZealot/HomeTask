@@ -1,0 +1,121 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 12},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+\section{Необходимые сведения}
+\subsection{Метод деления пополам}
+Пускай надо найти корень какого-либо уравнения $f(x)=0$ на отрезке $[a, b]$, при этом корень на этом отрезке единственный\footnote{Также необходимо, чтобы функция была непрерывной.}. Тогда на концах отрезках функция обязательно принимает разные знаки. Если мы возмём точку $m$ по середине отрезка, то функция там принимает какой-то знак\footnote{Возможно оно там равна нулю, тогда мы попали в корень, но это реже бывает}. Значит корень заключён между серединой и тем из концов отрезка, который имеет другой знак. Процесс продолжаем до тех пор пока длина рассматриваемого отрезка не станет меньше заданной точности, тогда считаем, что корень приблизительно на середине отрезка.
+
+Описание алгоритма в псведокоде:
+\begin{itemize}
+ \item Шаг 1. Выбрать точки $a$ и $b$. Посчитать в них функцию $f_a=f(a)$, $f_b=f(b)$
+ \item Шаг 2. Найти середину отрезка $m=(a+b)/2$.
+ \item Шаг 3. Посчитать функцию в середине $f_m=f(m)$
+ \item Шаг 4. Если $f_m$ равна нулю, то перейти к шагу 9.
+ \item Шаг 5. Если $f_a\cdot{}f_m<0$, то присвоить $f_b=f_m$ и $b=m$. 
+ \item Шаг 6. Иначе $f_a=f_m$ и $a=m$.
+ \item Шаг 7. Если $b-a>\varepsilon$ перейти к шагу 2.
+ \item Шаг 8. Найти середину отрезка $m=(a+b)/2$.
+ \item Шаг 9. $m$ --- искомый корень уравнения. Конец
+\end{itemize}
+
+\subsection{Квадратное уравнение}
+Если задано квадратное уравнение:
+\begin{equation}
+ ax^2+bx+c=0,
+\end{equation}
+то можно вычислить его дискриминант $D$ по формуле:
+\begin{equation}
+ D=b^2-4ac.
+\end{equation}
+Если $D<0$, то корней нет, если $D=0$, то корень один $x=-b/2a$, и наконец если $D>0$, то два корня можн найти по следующим формулам:
+\begin{equation}
+ x_1=\frac{-b+\sqrt{D}}{2a},
+\end{equation}
+\begin{equation}
+ x_1=\frac{-b-\sqrt{D}}{2a}.
+\end{equation}
+
+
+
+
+\section{Задачи от меня}
+
+\begin{enumerate}
+ \item Найдите квадратный корень методом деления пополам.
+ \item Пользователь вводит коэффициенты $a$, $b$ и $c$. Решить квадратное уравнение $ax^2 + bx + c = 0$.
+ \item Найти к чему стремится отношение двух соседних членов ряда Фибоначчи при увеличивающемся $n$.
+\end{enumerate}
+
+\section{Задачи от Ивана}
+
+\subsection*{Лёгкий уровень}
+\begin{enumerate}
+ \item Вывести 10 раз слово \textit{Hello}.
+ \item Имеется число 64, вывести пошаговое деление числа на 2 (т.е. вывод должен выглядеть как):
+32
+16
+8
+4
+2
+1
+0.
+\end{enumerate}
+
+\subsection*{Средний уровень}
+\begin{enumerate}
+\item Пользователь вводит любое число, программа должна определить чётное число или нет. Если чётное --- вывести надпись \textit{Even}, если нечётное --- \textit{Odd}.
+\item Пользователь вводит любое число. Отсчитать от этого числа до нуля. К примеру, пользователь вводит 5, программа в ответ выводит:
+4
+3
+2
+1
+0.
+\end{enumerate}
+
+\subsection*{Сложный уровень}
+\begin{enumerate}
+ \item Пользователь вводит любое число и любой делитель (например 10 и 2), программа выводит результаты деления, а в конце, то есть когда число дальше нацело не делится, пишет \textit{Finish}.
+ \item Влад и Иван бегут наперегонки, пользователь вводит скорость Влада и Вани в м/с, а также длительность забега в метрах. Влад устаёт через 57\% дистанции, Ваня через 63\%. После наступления усталости Ваня бежит на 30\% медленнее, Влад на 28\%. Определить, кто придёт к финишу первым.
+\end{enumerate}
+
+
+
+\end{document}
