@@ -1,0 +1,80 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 14},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+Во всех задачах, если специально не оговорено иное, необходимо разбить программу на несколько файлов.
+
+\section{Задачи}
+
+\begin{enumerate}
+ \item Создайте папку для собственных модулей в вашем домашнем репозитории\footnote{Например, дайте ей имя mylib или mymodules.}. В ней разместите заголовочный файл и файл реализации расширенной математики в которых реализованы функции нахождения НОД и НОК. В папке домашнего задания 14, создайте программу, которая реализует задачу 13.3 использую функцию gcd из вашего модуля\footnote{У вас будет в этой программе только main.c в котором будет примерно следующее \#include "../../mymodules/mathx.h". Не забудьте добавить файлы из вашего модуля в проект}.
+ \item Написать функцию перевода произвольного числа в произвольную систему счисления с основанием от 2 до 36\footnote{Чтобы хватило латинских букв для цифр.}.
+ \item Напишите игру в кости между человеком и компьютером. Они по очереди кидают по два кубика. Побеждает тот у кого сумма больше. Кубики рисуйте псевдографикой (см. рисунки \ref{lst:cube3} и \ref{lst:cube6} в качестве примера).
+\end{enumerate}
+
+\begin{listing}[H]
+\begin{center}
+\begin{minted}[frame=single]{text}
++---+
+|O  |
+| O |
+|  O|
++---+
+\end{minted}
+\end{center}
+\caption{Кубик 3}
+\label{lst:cube3}
+\end{listing}
+
+\begin{listing}[H]
+\begin{center}
+\begin{minted}[frame=single]{text}
++---+
+|OOO|
+|   |
+|OOO|
++---+
+\end{minted}
+\end{center}
+\caption{Кубик 6}
+\label{lst:cube6}
+\end{listing}
+
+\end{document}
