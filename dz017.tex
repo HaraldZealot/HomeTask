@@ -1,0 +1,77 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 17},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+\section{Обратная польская запись}
+
+\href{https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%B0%D1%8F_%D0%BF%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F_%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C}{Обратная польская запись} 
+--- это один из способов записи математических выражений. Удобен тем, что для него нет необходимости понятия приоритета операций, так как само положение операторов целиком и полностью определяет порядок вычисления. С помощью стека обратная польская запись легко вычисляется. Если встречается число, то оно заносится в стек, если встречается оператор, то извлекается два элемента (учитывая порядок), над ними производится операция, результат которой заносится в стек. После чтения всего выражения в стеке будет только одно число --- результат  выражения.
+
+\section{Язык brainfuck}
+
+Язык \href{https://ru.wikipedia.org/wiki/Brainfuck}{brainfuck} --- это минималистичный эзотерический язык программирования. Он работает в следующей модели: есть память в виде массива unsigned char некоторого размера, изначально весь массив заполнен нулями. Есть пишуще-читающая головка, изначально установленная в нулевую позицию памяти, ячейка на которую установлена головка является текущей. 
+
+В языке восемь операций
+
+\begin{itemize}
+ \item \verb|+| увеличивает значение текущей ячейки на 1 (с учётом переполнения).
+ \item \verb|-| уменьшает значение текущей ячейки на 1 (с учётом переполнения).
+ \item \verb|>| сдвигает головку на одну позицию вправо.
+ \item \verb|<| сдвигает головку на одну позицию влево.
+ \item \verb|.| выводит текущую ячейку на консоль как символ.
+ \item \verb|,| вводит символ с клавиатуры в текущую ячейку.
+ \item \verb|[| если текущая ячейка не ноль, то программа переходит на следующую позицию, если ноль, то переходит на позицию следующую после соответствующей закрывающей скобочки.
+ \item \verb|]| если текущая ячейка не ноль, то переходит на позицию следующую после соответствующей открывающей скобочки, если ноль, то программа переходит на следующую позицию.
+\end{itemize}
+
+
+\section{Задание}
+
+\begin{enumerate}
+ \item Пользователь вводит обратную польскую запись в виде одноциферных чисел и знаков без пробелов, в конце пишет знак <<=>>. Посчитать результат записи полпгая что числа вещественные.
+ \item Реализовать интерпретатор упрощённой версии brainfuck (нет операций <<[>>, <<]>> и <<,>>, а операция <<;>> является признаком конца программы). Интерпретатор должен работать <<налету>>, то есть в цикле чтения программы он должен её выполнять.
+ \item Реализовать интерпретатор полной версии brainfuck. Признаком конца программы является символ перевода строки (используйте функции getchar() и putchar(), смотрите например \href{http://www.cplusplus.com/reference/cstdio/}{здесь} ).
+\end{enumerate}
+
+Для получения бонуса нужно в интерпретаторе brainfuck реализовать все возможные защиты.
+
+
+
+\end{document}
