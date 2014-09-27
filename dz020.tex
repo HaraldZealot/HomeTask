@@ -1,0 +1,69 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+\renewcommand\listingscaption{Код}
+\newminted{bash}{frame=lines}
+\newminted{c}{frame=leftline}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 20},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+\section{Задание}
+
+
+\begin{enumerate}
+ \item Найти в случайной матрице седловую точку если она там есть. Седловой точкой называется элемент матрицы который является минимумом в строке и максимумом в столбце. Матрица должна быть динамической, размеры задаёт пользователь, числа случайные. Реализовать две версии программы на каждый из способов реализации динамической матрицы\footnote{Это в качестве упражнения, в дальнейшем пользуйтесь тем способом, который вам будет удобнее}.
+ \item Реализовать работу со стеком с помощью функций, в листинге \ref{lst:pushfunction} приведен пример функции push, реализуйте также pop, onTop, isEmpty.
+ \item Реализуйте поиск корня уравнения метод деления пополам (с возможностью прямого попадания в корень). Решите им три различных уравнения в одной программе.
+ \item С помощью стандартной функции qsort, отсортируйте массив по убыванию, по возрастанию суммы цифр, по возрастанию количества делителей числа.
+\end{enumerate}
+\begin{listing}[H]
+\begin{center}
+\begin{ccode}
+void push(int *stack, int size, int *top, int datum)
+{
+    assert(*top < size - 1);
+    stack[++(*top)] = datum;
+}
+\end{ccode}
+\end{center}
+\caption{Функция добавления элемента в стек}
+\label{lst:pushfunction}
+\end{listing}
+
+
+\end{document}
