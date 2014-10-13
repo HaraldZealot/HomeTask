@@ -1,0 +1,55 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+\renewcommand\listingscaption{Код}
+\newminted{bash}{frame=lines}
+\newminted{c}{frame=leftline}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 22},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+\section*{Задание}
+
+
+\begin{enumerate}
+ \item Реализовать очередь на односвязном списке. С её помощью реализовать алгоритм FCFS диспетчера процессов.
+ \item Написать собственные реализаций функций strlen, strcpy, strcat, strcmp.
+\end{enumerate}
+
+
+
+\end{document}
