@@ -26,27 +26,69 @@
 
 \usepackage{minted}
 \usemintedstyle{friendly}
+\renewcommand\listingscaption{Код}
+\newminted{bash}{frame=lines}
+\newminted{c}{frame=leftline}
 
 \author{Alaksiej Stankievič}
 \title{Домашние задание 3}
 
 \begin{document}
  \section{Запрограммировать на языке C}
-  Написать программу, которая предлагает пользователю ввести два числа, а затем выводит 5 арифметических операций в следующем виде:
-  \begin{verbatim}
+ \begin{enumerate}
+ \item Вывести на экран стихотворение Чарльза Буковского так, как показано в листинге \ref{lst:poetry}
+ \begin{listing}[H]
+  \begin{center}
+   \begin{minted}[frame=lines]{text}
+       And The Moon And The Stars And The World
+                 by Charles Bukowski
+                 
+  Long walks at night--
+  that's what good for the soul:
+  peeking into windows
+  watching tired housewives
+  trying to fight off
+  their beer-maddened husbands.
+   \end{minted}
+  \end{center}
+  \caption{Стихотворение.}
+  \label{lst:poetry}
+ \end{listing}
+
+  \item Написать программу, которая предлагает пользователю ввести два числа, а затем выводит 5 арифметических операций 
+в следующем виде:
+\begin{listing}[H]
+ \begin{center}
+  \begin{bashcode}
 7 + 5 = 12
 7 - 5 = 2
 7 * 5 = 35
 7 / 5 = 1
-7 % 5 = 2
-  \end{verbatim}
- \section{Поупражняться в тетради}
-  \begin{itemize}
-   \item Написать таблицу сложения и умножения в двоичной и шестнадцатеричной системе.
-   \item Сложить столбиком числа содержащие не менее 5 цифр в двоичной и шестнадцатеричной системе
-   \item Умножить столбиком числа содержащие не менее 5 цифр в двоичной и шестнадцатеричной системе
-   \item Разделить столбиком числа в двоичной системе.
-  \end{itemize}
+7 % 5 = 2  
+  \end{bashcode}
+ \end{center}
+ \caption{Вывод программы, если пользователь ввёл 7 и 5.}
+ \label{lst:sampleoutput}
+\end{listing}
+
+  \item Пользователь вводит радиус основания и высоту (можно целыми числами). Вывести объём и полную поверхность конуса 
+(дробными числами с форматированием).
+  \item Пользователь вводит 4 числа, а вы должны вывести числа большие в 2 раза по диагонали. Например пользователь ввёл
+  2 7 0 3, тогда на экране будет 
+\begin{listing}[H]
+  \begin{center}
+   \begin{minted}[frame=lines]{text}
+4
+ 14
+  0
+   9
+   \end{minted}
+  \end{center}
+  \caption{Диагональный вывод.}
+  \label{lst:diagonal}
+ \end{listing}
+  
+\end{enumerate}
 
 
 \end{document}
