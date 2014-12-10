@@ -26,6 +26,9 @@
 
 \usepackage{minted}
 \usemintedstyle{friendly}
+\renewcommand\listingscaption{Код}
+\newminted{bash}{frame=lines}
+\newminted{c}{frame=leftline}
 
 \usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
 
@@ -41,10 +44,46 @@ pdfsubject = {домашнее задание}
 
 
  Запрограммировать на языке С.
+ 
+ Вызов функции \verb|system("cls");| на windows или \verb|system("clear");| на  linux очищает всю консоль.
  \begin{enumerate}
-  \item Реализовать алгоритм Евклида нахождения НОД\footnote{наибольший общий делитель, по-английски great common devisor (gcd).} двух чисел.
-  \item Найти НОК\footnote{наименьшее общее кратное, по-английски least common multiply (lcm).} двух чисел\footnote{\textit{Указание:} воспользуйтесь НОД}.
+  \item Реализовать алгоритм Евклида нахождения НОД\footnote{наибольший общий делитель, по-английски great common 
+devisor (gcd).} двух чисел.
+  \item Найти НОК\footnote{наименьшее общее кратное, по-английски least common multiply (lcm).} двух 
+чисел\footnote{\textit{Указание:} воспользуйтесь НОД}.
+  \item Покажите к чему стремится отношение соседних чисел Фибоначчи. Для этого выведите в столбик отношение 
+последующего к предыдущему и предыдущего к последующему для первых 40 чисел Фибоначчи.
+
+  \item Пользователь вводит натуральные числа $w$ и $h$. Напечатать звёздочками прямоугольник введённой ширины и высоты.
+  \begin{listing}[H]
+\begin{center}
+\begin{minted}[frame=lines]{text}
+******
+******
+******
+******
+\end{minted}
+\end{center}
+
+\caption{Прямоугольник с w равной 6 и h равной 4.}
+\label{lst:exampleSqure}
+\end{listing}
   \item Пользователь вводит ширину $w\geq{}1$ и высоту $h\geq{}1$, выведите соответствующую рамку символом \verb|#|.
+    \begin{listing}[H]
+\begin{center}
+\begin{minted}[frame=lines]{text}
+######
+#    #
+#    #
+######
+\end{minted}
+\end{center}
+
+\caption{Рамка с w равной 6 и h равной 4.}
+\label{lst:exampleFrame}
+\end{listing}
+
+  
  \end{enumerate}
 
 \end{document}
