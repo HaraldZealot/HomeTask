@@ -1,0 +1,90 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 14b},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+Во всех задачах, если специально не оговорено иное, необходимо разбить программу на несколько файлов.
+
+\section{Задачи}
+
+\begin{enumerate}
+ \item Создайте проект с использованием make. В отдельный файл вынесите следующие функции:
+ \begin{enumerate}
+  \item подсчёт числа цифр в числе (для 123 это 3, для 0 это 1)
+  \item отделение первой цифры (самой левой, для 123 это 1)
+  \item отделение всех цифр кроме первой (для 123 это 23)
+  \item приписывания к числу цифры в конце (для 23 и 4 это 234)
+  \item циклического сдвига цифр в числе (для 123 это 231)
+ \end{enumerate}
+  Продемонстрируйте в функции main работу всех этих функций.
+ \item Использую модуль совместимости реализуйте анимацию расширяющегося и сужающегося в центре квадратика.
+ \item Вы хотите взломать сейф особой конструкции, ключевая комбинация в нём задаётся перестановкой цифр в заданном 
+числе. Напишите программу помощник, которая по введённому числу распечатает все перестановки цифр в 
+числе\footnote{Указание: воспользуйтесь рекурсией и функциями которые вы написали в первом задании.}.
+ \item(бонусная) Пользователь вводит число, это ширина в символах спирали. Высота всегда на единицу больше. Каждый 
+виток спирали печатается следующей буквой, первая буква А. Смотрите пример \ref{lst:spiral}. Распечатайте спираль 
+(массивы и матрицы не использовать).
+\begin{listing}[H]
+\begin{center}
+\begin{minted}[frame=single]{text}
+AAAAAAAAAAAAAAAA
+               A
+ABBBBBBBBBBBBB A
+A            B A
+A BCCCCCCCCC B A
+A B        C B A
+A B CDDDDD C B A
+A B C    D C B A
+A B C DE D C B A
+A B C D  D C B A
+A B C DDDD C B A
+A B C      C B A
+A B CCCCCCCC B A
+A B          B A
+A BBBBBBBBBBBB A
+A              A
+AAAAAAAAAAAAAAAA
+\end{minted}
+\end{center}
+\caption{Спираль $16\times{}17$}
+\label{lst:spiral}
+\end{listing}
+\end{enumerate}
+
+\end{document}

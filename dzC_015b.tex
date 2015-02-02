@@ -1,0 +1,68 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 15b},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+
+\section{Задачи}
+
+Во всех задачах использовать прием объявления массива большого размера с реальным использованием лишь части. Размер
+части спрашивается у пользователя. Также у пользователя есть выбор вводить массив вручную или генерировать. Напоминаю,
+что всё должно быть разбито на функции.
+
+\begin{enumerate}
+  \item В массиве первый положительный элемент и последний отрицательный элемент переставить местами.
+  \item В массиве найти максимальный среди четных элементов и минимальный среди нечетных.
+  \item В массиве максимальные элементы, являющиеся четными числами, заменить значениями их индексов.
+  \item В массиве все четные элементы заменить максимальным элементом,  а нечетные --- минимальным.
+  \item В массиве найти последний четный положительный элемент, кратный заданному числу $p$, заменить его
+индексом и поставить в  конец массива.
+  \item Из всех участков массива , сплошь состоящих из нулей, выбрать самый длинный и отметить индексы его начала и
+конца.
+  \item В массиве найти максимальный из элементов, встречающихся только один раз.
+  \item В массиве найти минимальное из чисел, встречающихся более одного раза.
+  \item В массиве подсчитать количество элементов, встречающихся более одного раза.
+  \item В массиве определить максимальную длину последовательности равных элементов.
+  \item Дан массив $a$. Получить массив $b$, $i$-элемент которого равен среднему арифметическому первых $i$ элементов
+массива  $a$.
+\end{enumerate}
+
+
+
+\end{document}
