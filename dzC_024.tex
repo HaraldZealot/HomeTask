@@ -1,0 +1,80 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+\renewcommand\listingscaption{Код}
+\newminted{bash}{frame=lines}
+\newminted{c}{frame=leftline}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 24},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+\section{Задание}
+
+
+\begin{enumerate}
+ \item Реализовать калькулятор коммандной строки для произвольных инфиксных 
+(наших обычных) выражений. Должны быть поддержаны операции сложения, вычитания, 
+умножения и возведения в степень, а также круглые скобки. Для работы может 
+оказаться полезным использование тэгированных структур и функция преобразования 
+строки в вещественное число из стандартной библиотеки.
+ \item Реализовать два алгоритма планировщика процессов операционной системы. 
+На входе есть текстовый файл в первой строке которого указаном число 
+моделируемых процессов, а в последуещих строках для процессов заданы 
+идентификатор (целое число), время прихода на обслуживание и число квантов 
+времени необходимое процессу для выполнения задачи (тоже целые числа).
+ \begin{enumerate}
+  \item Алгоритм FCFS, первым пришёл первым обслужен.
+  \item Алгоритм round robin (карусельный), для обслуживания одного процесса 
+выделяется не более заданного числа квантов времени.
+ \end{enumerate}
+ \item Реализовать программу обхода графа. Граф задан в текстовом файле в 
+первой строке которого указано число верши и число рёбер, а в последующих 
+строках описано каждое ребро в виде пары двух чисел --- вершин графа связанных 
+данным ребром, вершины нумеруются с единицы. Вывести в строку через пробел 
+вершины в порядке соответсвующего обхода начиная с первой.
+\begin{enumerate}
+ \item Реализовать обход в глубину.
+ \item Реализовать обход в ширину.
+\end{enumerate}
+ \item  Сгенерировать случайный лабиринт в котором отсутствуют замкнутые 
+пространства (области из которых недостижим выход).
+\end{enumerate}
+
+
+
+
+\end{document}
