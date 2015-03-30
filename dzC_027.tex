@@ -1,0 +1,77 @@
+\documentclass[12pt]{article} 
+\usepackage[xetex, a4paper, left=2cm, right=2cm, top=2cm,bottom=2cm]{geometry}
+\usepackage[cm-default]{fontspec}
+\usepackage{xunicode}
+
+%\tolerance=1000
+%\emergencystretch=0.74cm 
+
+\usepackage{polyglossia}
+\setdefaultlanguage[spelling=modern]{russian}
+\setotherlanguage{english} 
+\defaultfontfeatures{Scale=MatchLowercase,Ligatures=TeX}  %% устанавливает поведение шрифтов по умолчанию  
+\newfontfamily\cyrillicfont{Linux Libertine} 
+\setromanfont[Mapping=tex-text]{Linux Libertine}
+\setsansfont[Mapping=tex-text]{Linux Biolinum}
+\setmonofont{DejaVu Sans Mono}
+%\newfontfamily\cyrillicfont{Liberation Mono} 
+
+%\usepackage{makecell}
+
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+
+%\renewcommand{\thesection}{\Alph{section}}
+%\newcount\wd    \wd=\textwidth \multiply\wd by 8 \divide\wd by 17
+
+\usepackage{minted}
+\usemintedstyle{friendly}
+\renewcommand\listingscaption{Код}
+\newminted{bash}{frame=lines}
+\newminted{c}{frame=leftline}
+
+\usepackage[unicode, pdfborder={0 0 0 0}]{hyperref}
+
+\author{Alaksiej Stankievič}
+\title{Домашнее задание}
+
+\begin{document}
+\hypersetup{
+pdftitle = {Задание 27},
+pdfauthor = {Alaksiej Stankievič},
+pdfsubject = {домашнее задание}
+}% End of hypersetup
+
+\section{Игра <<жизнь>>}
+Игра <<жизнь>> Коэна --- это поле клеточных автоматов которые эволиционируют 
+некоторым образом. Клеточный автомат это конечный автомат (соответсвенно он 
+имееет конечное число состояний) получающий в качестве входа состояния 
+окружающих автоматов.
+
+Коэн определил следующие правилы игры <<жизнь>>:
+\begin{enumerate}
+ \item Есть бесконечное квадртаное клеточное поле.
+ \item Каждая клеточка может быть в двух состояниях: живая и мёртвая.
+ \item У каждой клетки есть восемь соседей по кругу, их состояние влияет на 
+состояние клетки.
+ \item Если у пустой (мёртвой) клетки, имеется ровно 3 соседа, то она оживает, 
+<<рождается>>.
+ \item Если у живой клетки 2 или 3 соседа, то она продолжает жить, а в 
+противном случае она умирает.
+\end{enumerate}
+
+
+\section{Задание}
+
+Реализуйте программу с использованием библиотеки SDL2, моделирующую игру 
+<<жизнь>>. Бесконечное поле замените полем с тороидальной 
+топологией\footnote{Это когда при переходе через край мы оказываемся на 
+противоположному краю}. Необходим режим расстановки, в котором пользователь 
+может с помощью клавиш (и возможно мыши) сделать изначальную конфигурацию, и 
+режим моделирования.
+
+
+
+
+
+\end{document}
